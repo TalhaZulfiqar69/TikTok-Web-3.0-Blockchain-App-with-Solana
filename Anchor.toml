@@ -1,0 +1,14 @@
+[features]
+seeds = false
+[programs.devnet]
+tiktok = "4XZcsE9CtgEDXvfhzxuUmnjAz5BLAH2vBzWAx5xXdeto"
+
+[registry]
+url = "https://anchor.projectserum.com"
+
+[provider]
+cluster = "devnet"
+wallet = "/Users/talhazulifqar1/.config/solana/id.json"
+
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
