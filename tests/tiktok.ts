@@ -1,16 +1,16 @@
-import * as anchor from "@project-serum/anchor";
-import { Program } from "@project-serum/anchor";
-import { Tiktok } from "../target/types/tiktok";
+import * as anchor from '@project-serum/anchor';
+import { Program } from '@project-serum/anchor';
+import { Tiktok } from '../target/types/tiktok';
 
-describe("tiktok", () => {
+describe('tiktok', () => {
   // Configure the client to use the local cluster.
   anchor.setProvider(anchor.AnchorProvider.env());
 
   const program = anchor.workspace.Tiktok as Program<Tiktok>;
 
-  it("Is initialized!", async () => {
+  it('Is initialized!', async () => {
     // Add your test here.
     const tx = await program.methods.initialize().rpc();
-    console.log("Your transaction signature", tx);
+    console.log('Your transaction signature', tx);
   });
 });

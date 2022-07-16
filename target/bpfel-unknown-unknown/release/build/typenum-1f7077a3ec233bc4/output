@@ -1,0 +1,2 @@
+cargo:rustc-env=TYPENUM_BUILD_CONSTS=/home/talha/Documents/Blockchain/TikTok-Web-3.0-Blockchain-App-with-Solana/target/bpfel-unknown-unknown/release/build/typenum-1f7077a3ec233bc4/out/consts.rs
+cargo:rustc-env=TYPENUM_BUILD_OP=/home/talha/Documents/Blockchain/TikTok-Web-3.0-Blockchain-App-with-Solana/target/bpfel-unknown-unknown/release/build/typenum-1f7077a3ec233bc4/out/op.rs

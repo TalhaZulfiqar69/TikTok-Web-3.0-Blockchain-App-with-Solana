@@ -114,3 +114,11 @@
     flex-direction: column;
   }
 }
+
+.app {
+  height: 100vh;
+  background-color: #2c2d30;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

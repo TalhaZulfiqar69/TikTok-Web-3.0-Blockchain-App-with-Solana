@@ -3,9 +3,61 @@ export type Tiktok = {
   "name": "tiktok",
   "instructions": [
     {
-      "name": "initialize",
-      "accounts": [],
-      "args": []
+      "name": "createUser",
+      "accounts": [
+        {
+          "name": "user",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "authority",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "clock",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "imageUrl",
+          "type": "string"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "userAccount",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "userName",
+            "type": "string"
+          },
+          {
+            "name": "userWalletAddress",
+            "type": "publicKey"
+          },
+          {
+            "name": "userProfileImageUrl",
+            "type": "string"
+          }
+        ]
+      }
     }
   ]
 };
@@ -15,9 +67,61 @@ export const IDL: Tiktok = {
   "name": "tiktok",
   "instructions": [
     {
-      "name": "initialize",
-      "accounts": [],
-      "args": []
+      "name": "createUser",
+      "accounts": [
+        {
+          "name": "user",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "authority",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "clock",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "imageUrl",
+          "type": "string"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "userAccount",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "userName",
+            "type": "string"
+          },
+          {
+            "name": "userWalletAddress",
+            "type": "publicKey"
+          },
+          {
+            "name": "userProfileImageUrl",
+            "type": "string"
+          }
+        ]
+      }
     }
   ]
 };
