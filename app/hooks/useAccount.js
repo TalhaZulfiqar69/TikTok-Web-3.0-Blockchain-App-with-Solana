@@ -32,6 +32,7 @@ export const useAccount = () => {
         ...defaultAccounts,
       },
     });
+    console.log('USER HAS SIGNUPED');
   };
   return { signup };
 };
