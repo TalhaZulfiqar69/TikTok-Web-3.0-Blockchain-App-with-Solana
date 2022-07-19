@@ -36,6 +36,54 @@
           "type": "string"
         }
       ]
+    },
+    {
+      "name": "createVideo",
+      "accounts": [
+        {
+          "name": "video",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "randomkey",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "authority",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "clock",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "name": "videoUrl",
+          "type": "string"
+        },
+        {
+          "name": "createName",
+          "type": "string"
+        },
+        {
+          "name": "creatorUrl",
+          "type": "string"
+        }
+      ]
     }
   ],
   "accounts": [
@@ -58,9 +106,59 @@
           }
         ]
       }
+    },
+    {
+      "name": "VideoAccount",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "authority",
+            "type": "publicKey"
+          },
+          {
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "name": "videoUrl",
+            "type": "string"
+          },
+          {
+            "name": "creatorName",
+            "type": "string"
+          },
+          {
+            "name": "creatorUrl",
+            "type": "string"
+          },
+          {
+            "name": "commentCount",
+            "type": "u64"
+          },
+          {
+            "name": "index",
+            "type": "u64"
+          },
+          {
+            "name": "creatorTime",
+            "type": "i64"
+          },
+          {
+            "name": "peopleWhoLike",
+            "type": {
+              "vec": "publicKey"
+            }
+          },
+          {
+            "name": "likes",
+            "type": "u64"
+          }
+        ]
+      }
     }
   ],
   "metadata": {
-    "address": "4XZcsE9CtgEDXvfhzxuUmnjAz5BLAH2vBzWAx5xXdeto"
+    "address": "6DibJpwyXNGAxmJeKCZjycAbntrXYGjRHhAactyjF7Yq"
   }
 }

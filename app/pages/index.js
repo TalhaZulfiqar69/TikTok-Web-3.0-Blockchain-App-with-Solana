@@ -25,7 +25,10 @@ const Home = () => {
                   <div className='font-medium text-center text-gray-400 hover:text-gray-400'>
                     Manage your account, check notifications, comment on videos
                   </div>
-                  <div className='text-gray-700 text-center px-4 py-2 m-2 mb-40'>
+                  <div
+                    className='text-gray-700 text-center px-4 py-2 m-2 mb-40'
+                    style={{ display: 'flex', justifyContent: 'center' }}
+                  >
                     <WalletMultiButton />
                   </div>
                 </div>

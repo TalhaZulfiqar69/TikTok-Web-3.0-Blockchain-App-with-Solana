@@ -25,14 +25,14 @@ export const useAccount = () => {
       program.programId
     );
 
-    await program.rpc.createUser(name, profile, {
+    const result = await program.rpc.createUser(name, profile, {
       accounts: {
         user: user_pda,
         authority: wallet.publicKey,
         ...defaultAccounts,
       },
     });
-    console.log('USER HAS SIGNUPED');
+    console.log('USER HAS SIGNUPED', { result });
   };
   return { signup };
 };
